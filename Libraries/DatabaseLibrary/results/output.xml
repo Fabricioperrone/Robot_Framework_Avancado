@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230918 16:24:15.821" rpa="false" schemaversion="4">
+<suite id="s1" name="Database" source="D:\Automação de Testes com Robot Framework - Avançado\Libraries\DataBaseLibrary\DataBaseLibrary\database.robot">
+<test id="s1-t1" name="Exemplo 01: Executando scripts SQL via Arquivos" line="15">
+<kw name="Conectar no Banco de Dados" type="SETUP">
+<kw name="Connect To Database">
+<arg>dbapiModuleName=pymysql</arg>
+<arg>dbName=${robot}</arg>
+<arg>dbUsername=${root}</arg>
+<arg>dbPassword=${root}</arg>
+<arg>dbHost=${localhost}</arg>
+<arg>dbPort=${3306}</arg>
+<msg timestamp="20230918 16:24:15.881" level="FAIL">No keyword with name 'Connect To Database' found.</msg>
+<status status="FAIL" starttime="20230918 16:24:15.878" endtime="20230918 16:24:15.881"/>
+</kw>
+<status status="FAIL" starttime="20230918 16:24:15.875" endtime="20230918 16:24:15.882"/>
+</kw>
+<kw name="Desconectar do Banco de Dados" type="TEARDOWN">
+<kw name="Disconnect From Database">
+<msg timestamp="20230918 16:24:15.890" level="FAIL">No keyword with name 'Disconnect From Database' found.</msg>
+<status status="FAIL" starttime="20230918 16:24:15.890" endtime="20230918 16:24:15.890"/>
+</kw>
+<status status="FAIL" starttime="20230918 16:24:15.883" endtime="20230918 16:24:15.890">No keyword with name 'Disconnect From Database' found.</status>
+</kw>
+<status status="FAIL" starttime="20230918 16:24:15.873" endtime="20230918 16:24:15.891">Setup failed:
+No keyword with name 'Connect To Database' found.
+
+Also teardown failed:
+No keyword with name 'Disconnect From Database' found.</status>
+</test>
+<doc>[14/10/2019] https://franz-see.github.io/Robotframework-Database-Library/api/1.2.2/DatabaseLibrary.html
+Instale: "pip install -U robotframework-databaselibrary"
+Para acessar o BD o Robot precisa conhecer o DRIVER de cada banco, então precisamos instalar esse DRIVER também (instale apenas para o BD que você utiliza!) ...
+Para PostgreSQL: "pip install psycopg2"
+Para SQLite 3: não precisa instalar nada!
+Para MySQL: "pip install pymysql"
+Para SQL Server: "pip install pymssql"
+Para Oracle: "pip install cx-Oracle"</doc>
+<status status="FAIL" starttime="20230918 16:24:15.824" endtime="20230918 16:24:15.896"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Database">Database</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230918 16:24:15.867" level="ERROR">Error in file 'D:\Automação de Testes com Robot Framework - Avançado\Libraries\DataBaseLibrary\DataBaseLibrary\database.robot' on line 10: Importing library 'DatabaseLibrary' failed: ModuleNotFoundError: No module named 'DatabaseLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Fabricio Perrone\AppData\Local\Programs\Python\Python311\Scripts\robot.exe
+  C:\Users\Fabricio Perrone\AppData\Local\Programs\Python\Python311\python311.zip
+  C:\Users\Fabricio Perrone\AppData\Local\Programs\Python\Python311\DLLs
+  C:\Users\Fabricio Perrone\AppData\Local\Programs\Python\Python311\Lib
+  C:\Users\Fabricio Perrone\AppData\Local\Programs\Python\Python311
+  C:\Users\Fabricio Perrone\AppData\Local\Programs\Python\Python311\Lib\site-packages</msg>
+</errors>
+</robot>
